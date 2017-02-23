@@ -1,6 +1,6 @@
 {
   "name": "react-simple-timeago",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A very simple time ago component for ReactJS",
   "main": "./dist/index.js",
   "scripts": {
