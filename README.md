@@ -11,7 +11,6 @@ npm install react-simple-timeago --save
 import TimeAgo from 'react-simple-timeago';
 
 <TimeAgo date={new Date()} />
-
 ```
 ## Properties
 * element(string) - Element that will be used to wrap the time ago texts.
