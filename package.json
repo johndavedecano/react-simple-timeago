@@ -1,0 +1,30 @@
+{
+  "name": "react-simple-timeago",
+  "version": "1.0.0",
+  "description": "A very simple time ago component for ReactJS",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "ReactJS",
+    "Time",
+    "Ago",
+    "TimeAgo",
+    "ender"
+  ],
+  "author": "John Dave Decano<johndavedecano@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^1.27.2",
+    "react": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0"
+  }
+}
