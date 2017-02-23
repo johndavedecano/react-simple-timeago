@@ -13,9 +13,6 @@ npm install react-simple-timeago --save
 * isLive(Boolean) - Tells wether you want to automatically update the component.
 * addSuffix(Boolean) - Distances less than a minute are more detailed
 * includeSeconds(Boolean) - Result indicates if the second date is earlier or later than the first
-## Credits
-* https://facebook.github.io/react/
-* https://date-fns.org
 
 ## Further Help
 [![Contact me on Codementor](https://cdn.codementor.io/badges/contact_me_github.svg)](https://www.codementor.io/johndavedecano?utm_source=github&utm_medium=button&utm_term=johndavedecano&utm_campaign=github)
