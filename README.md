@@ -6,6 +6,13 @@ yarn add react-simple-timeago --save
 #or
 npm install react-simple-timeago --save
 ```
+## Usage
+```
+import TimeAgo from 'react-simple-timeago';
+
+<TimeAgo date={new Date()} />
+
+```
 ## Properties
 * element(string) - Element that will be used to wrap the time ago texts.
 * date(Date, String, Number) - The given date
