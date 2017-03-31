@@ -3,18 +3,35 @@ import differenceInSeconds from 'date-fns/difference_in_seconds';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 
 class TimeAgo extends Component {
+    
+    isMounted = false;
+
+    state = {
+        lastUpdatedAt: null
+    };
 
     componentDidMount() {
+        
+        this.isMounted = true;
+        
         if (this.props.isLive) {
             this.updateTime();
         }
+    }
+
+    componentWillUnmount() {
+        this.isMounted = false;
     }
 
     updateTime = () => {
         const interval = this.getInterval();
         if (interval > 0) {
             setTimeout(this.updateTime, interval);
-            this.forceUpdate();
+            if (this.isMounted) {
+                this.setState({
+                    lastUpdatedAt: new Date().getTime()
+                });
+            }
         }
     }
 
