@@ -45,7 +45,7 @@ var TimeAgo = function (_Component) {
         }, _this.updateTime = function () {
             var interval = _this.getInterval();
             if (interval > 0) {
-                setTimeout(_this.updateTime, interval);
+                _this.timeout = setTimeout(_this.updateTime, interval);
                 if (_this.isMounted) {
                     _this.setState({
                         lastUpdatedAt: new Date().getTime()
@@ -69,6 +69,7 @@ var TimeAgo = function (_Component) {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
             this.isMounted = false;
+            clearTimeout(this.timeout);
         }
     }, {
         key: 'getDifference',

@@ -21,12 +21,13 @@ class TimeAgo extends Component {
 
     componentWillUnmount() {
         this.isMounted = false;
+        clearTimeout(this.timeout);
     }
 
     updateTime = () => {
         const interval = this.getInterval();
         if (interval > 0) {
-            setTimeout(this.updateTime, interval);
+            this.timeout = setTimeout(this.updateTime, interval);
             if (this.isMounted) {
                 this.setState({
                     lastUpdatedAt: new Date().getTime()
